@@ -1,6 +1,7 @@
+// ==UserScript==
 // @name        NicoRanShortcut
 // @namespace   http://www.atomer.sakura.ne.jp
-// @description
+// @description ニコニコランキングのカテゴリショートカット的なやつ
 // @include     http://www.nicovideo.jp/ranking/*
 // @version     1.0.0
 // ==/UserScript==
