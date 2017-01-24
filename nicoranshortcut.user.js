@@ -62,7 +62,7 @@ function parseURL(url) {
 const navigations = document.querySelectorAll(".mainMenu > .inner .navigation li");
 const childNav = document.querySelector(".mainMenu > .category .navigation");
 
-[].forEach.apply(navigations, [function(el) {
+[].forEach.apply(navigations, [el => {
     let html;
     if (/current/.test(el.className)) {
         html = childNav.innerHTML;
@@ -77,7 +77,7 @@ const childNav = document.querySelector(".mainMenu > .category .navigation");
         }
         html = list.join("");
     }
-    el.addEventListener("mouseover", function () {
+    el.addEventListener("mouseover",  () => {
         childNav.innerHTML = html;
     }, false);
 }]);
