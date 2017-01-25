@@ -61,7 +61,14 @@ function parseURL(url) {
 }
 
 const navigations = document.querySelectorAll(".mainMenu > .inner .navigation li");
-const childNav = document.querySelector(".mainMenu > .category .navigation");
+let childNav = document.querySelector(".mainMenu > .category .navigation");
+
+if (!childNav) {
+    let cat = document.querySelector(".mainMenu > .category .inner");
+    childNav = document.createElement("ul");
+    childNav.className = "navigation";
+    cat.insertBefore(childNav, cat.firstChild);
+}
 
 [].forEach.apply(navigations, [el => {
     let html;
